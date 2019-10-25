@@ -1,0 +1,2 @@
+class EmployeeRegistration < ApplicationRecord
+end
