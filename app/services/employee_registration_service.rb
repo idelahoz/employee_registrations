@@ -1,17 +1,17 @@
 class EmployeeRegistrationService < ApplicationService
-  def initialize(registration_id:, user_attributes:, step:)
+  def initialize(registration_id:, registration_attributes:, step:)
     @registration_id = registration_id
-    @user_attributes = user_attributes
+    @registration_attributes = registration_attributes
     @step = step
   end
 
   def call
-    steps[step.to_sym].call(registration_id, user_attributes)
+    steps[step.to_sym].call(registration_id, registration_attributes)
   end
 
   private
 
-  attr_reader :registration_id, :user_attributes, :step
+  attr_reader :registration_id, :registration_attributes, :step
 
   def steps
     @steps ||= {
