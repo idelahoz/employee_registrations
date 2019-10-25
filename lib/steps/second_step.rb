@@ -3,10 +3,6 @@ module Steps
 
     private
 
-    def employee_registration
-      EmployeeRegistration.new
-    end
-
     def required_attributes
       [:trade]
     end

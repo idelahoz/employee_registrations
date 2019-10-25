@@ -9,6 +9,7 @@ module Steps
       ensure_parameters!
       employee_registration.assign_attributes(filtered_attributes)
       employee_registration.save!
+      employee_registration
     end
   
     private

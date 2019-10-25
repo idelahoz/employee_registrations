@@ -6,6 +6,7 @@ module Steps
 
       employee_registration.update(completed: true)
       Employee.create!(employe_attributes)
+      employee_registration
     end
 
     private
