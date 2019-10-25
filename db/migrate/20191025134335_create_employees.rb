@@ -1,6 +1,6 @@
-class CreateEmployeeRegistrations < ActiveRecord::Migration[5.2]
+class CreateEmployees < ActiveRecord::Migration[5.2]
   def change
-    create_table :employee_registrations do |t|
+    create_table :employees do |t|
       t.string :first_name
       t.string :last_name
       t.string :phone
@@ -11,7 +11,6 @@ class CreateEmployeeRegistrations < ActiveRecord::Migration[5.2]
       t.string :skill_level
       t.string :ssn
       t.text :bio
-      t.boolean :completed
       t.timestamps
     end
   end
